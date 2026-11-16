@@ -1,0 +1,105 @@
+// Expressió escrita (secció 2 CCIRC, 50 punts)
+
+export const PROMPTS = [
+  { id: "w1", kind: { ca: "Columna d'opinió", es: "Columna de opinión" },
+    ca: "Escriu una columna d'opinió en què elogiïs un defecte (la mandra, la impaciència, la tossuderia...). Pots fer servir la ironia i l'humor, i il·lustrar el teu punt de vista amb una anècdota.",
+    es: "Escribe una columna de opinión en la que elogies un defecto (la pereza, la impaciencia, la terquedad...). Puedes usar la ironía y el humor, e ilustrar tu punto de vista con una anécdota." },
+  { id: "w2", kind: { ca: "Text argumentatiu", es: "Texto argumentativo" },
+    ca: "Cal posar deures als alumnes de primària? Escriu un text argumentatiu en què defensis la teva postura amb almenys dos arguments i un contraargument.",
+    es: "¿Hay que poner deberes a los alumnos de primaria? Escribe un texto argumentativo en el que defiendas tu postura con al menos dos argumentos y un contraargumento." },
+  { id: "w3", kind: { ca: "Carta formal", es: "Carta formal" },
+    ca: "Ets mestre/a de 4t de primària. Escriu una carta a les famílies per explicar un projecte nou d'hort escolar i demanar-los col·laboració.",
+    es: "Eres maestro/a de 4.º de primaria. Escribe una carta a las familias para explicar un nuevo proyecto de huerto escolar y pedirles colaboración." },
+  { id: "w4", kind: { ca: "Conte o escena", es: "Cuento o escena" },
+    ca: "Escriu un conte breu o una escena en què un personatge descobreix que una qualitat seva (la sinceritat, la generositat...) li porta més problemes que avantatges.",
+    es: "Escribe un cuento breve o una escena en la que un personaje descubre que una cualidad suya (la sinceridad, la generosidad...) le trae más problemas que ventajas." },
+  { id: "w5", kind: { ca: "Article d'opinió", es: "Artículo de opinión" },
+    ca: "«Els videojocs eduquen.» Escriu un article d'opinió per a la revista de la teva escola en què prenguis posició sobre aquesta afirmació.",
+    es: "«Los videojuegos educan.» Escribe un artículo de opinión para la revista de tu escuela en el que tomes posición sobre esta afirmación." },
+  { id: "w6", kind: { ca: "Text argumentatiu", es: "Texto argumentativo" },
+    ca: "Per què vols ser mestre/a? Explica-ho en un text argumentatiu que relacioni la teva experiència personal amb el paper de l'escola a la societat.",
+    es: "¿Por qué quieres ser maestro/a? Explícalo en un texto argumentativo que relacione tu experiencia personal con el papel de la escuela en la sociedad." },
+  { id: "w7", kind: { ca: "Columna d'opinió", es: "Columna de opinión" },
+    ca: "Escriu una columna sobre els prejudicis: tria'n un de quotidià (sobre l'aspecte, l'origen, l'edat...) i reflexiona sobre com es forma i com es pot combatre.",
+    es: "Escribe una columna sobre los prejuicios: elige uno cotidiano (sobre el aspecto, el origen, la edad...) y reflexiona sobre cómo se forma y cómo se puede combatir." },
+  { id: "w8", kind: { ca: "Carta al director", es: "Carta al director" },
+    ca: "Escriu una carta al director d'un diari per queixar-te de la falta d'espais de joc segurs per als infants al teu barri i proposar-hi solucions.",
+    es: "Escribe una carta al director de un periódico para quejarte de la falta de espacios de juego seguros para los niños en tu barrio y proponer soluciones." },
+  { id: "w9", kind: { ca: "Text expositiu-argumentatiu", es: "Texto expositivo-argumentativo" },
+    ca: "Lectura en paper o en pantalla? Exposa avantatges i inconvenients de cada format i conclou amb la teva opinió.",
+    es: "¿Lectura en papel o en pantalla? Expón ventajas e inconvenientes de cada formato y concluye con tu opinión." },
+  { id: "w10", kind: { ca: "Relat personal", es: "Relato personal" },
+    ca: "Explica un record d'un/a mestre/a que et va marcar. Fes que el relat serveixi per defensar una idea sobre què és educar bé.",
+    es: "Cuenta un recuerdo de un/a maestro/a que te marcó. Haz que el relato sirva para defender una idea sobre qué es educar bien." },
+];
+
+// Rúbrica oficial: global 5 + adequació 15 + coherència 15 + cohesió 15 (cada criteri: 0 / 2,5 / 5)
+export const RUBRIC = [
+  { id: "ad", name: { ca: "Adequació", es: "Adecuación" }, items: [
+    { ca: "S'ajusta a la tasca i al gènere demanat (columna, carta, conte...).", es: "Se ajusta a la tarea y al género pedido (columna, carta, cuento...)." },
+    { ca: "Registre adequat i constant (formal / estàndard), sense col·loquialismes.", es: "Registro adecuado y constante (formal / estándar), sin coloquialismos." },
+    { ca: "Té en compte el receptor i la intenció (convèncer, explicar, entretenir).", es: "Tiene en cuenta al receptor y la intención (convencer, explicar, entretener)." },
+  ]},
+  { id: "co", name: { ca: "Coherència", es: "Coherencia" }, items: [
+    { ca: "Hi ha una tesi o idea central clara i el text no se n'aparta.", es: "Hay una tesis o idea central clara y el texto no se desvía." },
+    { ca: "Estructura clara: introducció, desenvolupament i conclusió.", es: "Estructura clara: introducción, desarrollo y conclusión." },
+    { ca: "Les idees són rellevants, suficients i ben argumentades (exemples, anècdotes...).", es: "Las ideas son relevantes, suficientes y bien argumentadas (ejemplos, anécdotas...)." },
+  ]},
+  { id: "ch", name: { ca: "Cohesió", es: "Cohesión" }, items: [
+    { ca: "Connectors variats i ben utilitzats.", es: "Conectores variados y bien utilizados." },
+    { ca: "Puntuació correcta i paràgrafs ben delimitats.", es: "Puntuación correcta y párrafos bien delimitados." },
+    { ca: "Referents i sinònims per evitar repeticions (pronoms, el·lipsis...).", es: "Referentes y sinónimos para evitar repeticiones (pronombres, elipsis...)." },
+  ]},
+];
+
+export const CONNECTORS = {
+  ca: ["en primer lloc", "en segon lloc", "per una banda", "per altra banda", "d'una banda", "de l'altra", "a més", "a més a més", "així mateix", "fins i tot", "també", "però", "tanmateix", "no obstant això", "en canvi", "malgrat", "tot i que", "encara que", "tot i això", "per tant", "així doncs", "en conseqüència", "per això", "per aquest motiu", "ja que", "atès que", "perquè", "com que", "per exemple", "és a dir", "o sigui", "en resum", "en definitiva", "en conclusió", "per acabar", "finalment", "pel que fa a", "quant a", "sens dubte", "de fet", "primer", "després", "a continuació", "aleshores", "llavors"],
+  es: ["en primer lugar", "en segundo lugar", "por un lado", "por otro lado", "por una parte", "por otra parte", "además", "asimismo", "incluso", "también", "pero", "sin embargo", "no obstante", "en cambio", "por el contrario", "a pesar de", "aunque", "aun así", "por lo tanto", "por tanto", "así pues", "en consecuencia", "por consiguiente", "por eso", "por ello", "ya que", "puesto que", "dado que", "porque", "como", "por ejemplo", "es decir", "o sea", "en resumen", "en definitiva", "en conclusión", "para terminar", "finalmente", "en cuanto a", "respecto a", "sin duda", "de hecho", "primero", "después", "a continuación", "entonces"],
+};
+
+// Errors freqüents que el corrector automàtic detecta
+export const AUTO_ERRORS = {
+  ca: [
+    { re: /\b(tinc|tens|té|tenim|teniu|tenen|tenia|tenies|teníem|tenien|tindré|tindria) que\b/gi, fix: "haver de / caldre", why: "«Tenir que» és un calc del castellà." },
+    { re: /\bs'en\b/gi, fix: "se'n", why: "L'apòstrof va després de la vocal." },
+    { re: /\bm'en\b/gi, fix: "me'n", why: "L'apòstrof va després de la vocal." },
+    { re: /\bt'en\b/gi, fix: "te'n", why: "L'apòstrof va després de la vocal." },
+    { re: /\ben quant a\b/gi, fix: "pel que fa a / quant a", why: "«En quant a» no és normatiu." },
+    { re: /\bdesde\b/gi, fix: "des de", why: "Castellanisme." },
+    { re: /\bhasta\b/gi, fix: "fins a", why: "Castellanisme." },
+    { re: /\bdegut a\b/gi, fix: "a causa de", why: "«Degut a» no introdueix causa." },
+    { re: /\bper suposat\b/gi, fix: "per descomptat", why: "Calc del castellà." },
+    { re: /\blo (que|bo|millor|pitjor|important|més)\b/gi, fix: "el que / allò que / l'important", why: "L'article neutre «lo» no és normatiu." },
+    { re: /\b(bueno|vale|pues|osigui|o sigue)\b/gi, fix: "bé/bo, d'acord, doncs, o sigui", why: "Barbarisme col·loquial." },
+    { re: /\bdisfrut\w*/gi, fix: "gaudir", why: "Castellanisme." },
+    { re: /\barrepent\w*/gi, fix: "penedir-se", why: "Castellanisme." },
+    { re: /\baburri\w*/gi, fix: "avorrir", why: "Castellanisme." },
+    { re: /\bahorr\w*/gi, fix: "estalviar", why: "Castellanisme." },
+    { re: /\ba nivell de\b/gi, fix: "pel que fa a / en l'àmbit de", why: "Calc del castellà." },
+    { re: /\bdonar-se compte\b/gi, fix: "adonar-se", why: "Calc del castellà." },
+    { re: /\bhi han\b/gi, fix: "hi ha", why: "«Haver-hi» és impersonal (registre formal)." },
+    { re: /\bl'(humitat|universitat|idea|història|infermera|unitat)\b/gi, fix: "la …", why: "No s'apostrofa davant de i/u àtones." },
+    { re: /\bexàmen\b/gi, fix: "examen", why: "Plana acabada en -en: sense accent." },
+    { re: /\balgún\b/gi, fix: "algun", why: "Aguda acabada en -un: sense accent." },
+    { re: /\bdóna\b/gi, fix: "dona", why: "Ja no porta diacrític (IEC 2017)." },
+  ],
+  es: [
+    { re: /\b(pienso|creo|opino|considero|supongo|dijo|dije) de que\b/gi, fix: "pienso que…", why: "Dequeísmo." },
+    { re: /\bme alegro que\b/gi, fix: "me alegro de que", why: "Queísmo." },
+    { re: /\bme acuerdo que\b/gi, fix: "me acuerdo de que", why: "Queísmo." },
+    { re: /\bhabían (muchos|muchas|varios|varias|unos|unas|dos|tres|problemas|personas)\b/gi, fix: "había…", why: "«Haber» impersonal es invariable." },
+    { re: /\bhubieron\b/gi, fix: "hubo", why: "«Haber» impersonal es invariable." },
+    { re: /\ba nivel de\b/gi, fix: "en cuanto a / en el ámbito de", why: "Solo si hay niveles reales." },
+    { re: /\ben base a\b/gi, fix: "según / a partir de", why: "Locución desaconsejada." },
+    { re: /\bcontra más\b/gi, fix: "cuanto más", why: "Forma vulgar." },
+    { re: /\bme se\b/gi, fix: "se me", why: "Orden de pronombres." },
+    { re: /\bhaber si\b/gi, fix: "a ver si", why: "Confusión haber / a ver." },
+    { re: /\b(fuistes|dijistes|hicistes|vinistes|tuvistes|estuvistes|cantastes)\b/gi, fix: "sin -s final", why: "2.ª persona del singular del pretérito sin -s." },
+    { re: /\b(tambien|despues|asi|aqui|facil|dificil|ademas|ultimo|tambíen)\b/gi, fix: "tilde", why: "Falta la tilde." },
+    { re: /\bsólo\b/gi, fix: "solo", why: "Sin tilde (Ortografía 2010)." },
+    { re: /\b(hacer|hicimos|hice|hizo) tarde\b/gi, fix: "llegar tarde", why: "Catalanismo." },
+    { re: /\bdetrás (mío|mía|tuyo|tuya|suyo|suya)\b/gi, fix: "detrás de mí…", why: "Adverbio + de + pronombre." },
+    { re: /\bsi (tendría|sabría|podría|habría)\b/gi, fix: "si tuviera / supiera…", why: "Condicional tras «si»." },
+    { re: /\bandé\b/gi, fix: "anduve", why: "Pretérito irregular." },
+  ],
+};

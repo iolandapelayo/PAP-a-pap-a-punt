@@ -1,0 +1,24 @@
+{
+  "name": "pap-a-punt",
+  "version": "1.0.0",
+  "private": true,
+  "description": "App per preparar la PAP (Prova d'Aptitud Personal) de Magisteri. Web, iOS i Android.",
+  "scripts": {
+    "serve": "npx --yes http-server www -p 8080 -c-1",
+    "cap:add:android": "npx cap add android",
+    "cap:add:ios": "npx cap add ios",
+    "cap:sync": "npx cap sync",
+    "cap:assets": "npx @capacitor/assets generate --iconBackgroundColor '#5b4bdb' --splashBackgroundColor '#f6f4ff'",
+    "android": "npx cap open android",
+    "ios": "npx cap open ios"
+  },
+  "dependencies": {
+    "@capacitor/android": "^6.1.2",
+    "@capacitor/core": "^6.1.2",
+    "@capacitor/ios": "^6.1.2"
+  },
+  "devDependencies": {
+    "@capacitor/assets": "^3.0.5",
+    "@capacitor/cli": "^6.1.2"
+  }
+}

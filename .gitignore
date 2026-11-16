@@ -1,0 +1,12 @@
+node_modules/
+.DS_Store
+Thumbs.db
+*.log
+.env
+.env.*
+# Capacitor: carpetes generades
+android/app/build/
+ios/App/Pods/
+ios/App/App/public/
+android/app/src/main/assets/public/
+~$*.docx

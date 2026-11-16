@@ -1,0 +1,8 @@
+{
+  "appId": "cat.papapunt.app",
+  "appName": "PAP a punt",
+  "webDir": "www",
+  "backgroundColor": "#f6f4ff",
+  "ios": { "contentInset": "always" },
+  "android": { "allowMixedContent": false }
+}
