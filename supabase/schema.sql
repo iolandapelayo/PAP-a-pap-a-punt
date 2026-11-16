@@ -25,6 +25,9 @@ create table if not exists public.activity (
 create index if not exists activity_user_created_idx on public.activity (user_id, created_at desc);
 
 -- 3) Seguretat: cada persona només veu i modifica les seves dades
+grant select, insert, update on public.progress to authenticated;
+grant select, insert on public.activity to authenticated;
+revoke all on public.progress, public.activity from anon;
 alter table public.progress enable row level security;
 alter table public.activity enable row level security;
 
